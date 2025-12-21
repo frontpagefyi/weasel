@@ -151,7 +151,7 @@ export function useSnapPoints({
       const newIndex =
         snapPoints?.findIndex((snapPoint) => snapPoint === activeSnapPointProp || snapPoint === activeSnapPoint) ?? -1;
       if (snapPointsOffset && newIndex !== -1 && typeof snapPointsOffset[newIndex] === 'number') {
-        snapToPoint(snapPointsOffset[newIndex] as number);
+        snapToPoint(snapPointsOffset[newIndex]);
       }
     }
   }, [activeSnapPoint, activeSnapPointProp, snapPoints, snapPointsOffset, snapToPoint]);
