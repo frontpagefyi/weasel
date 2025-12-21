@@ -24,7 +24,6 @@ function chain(...callbacks: any[]): (...args: any[]) => void {
   };
 }
 
-// @ts-ignore
 const visualViewport = typeof document !== 'undefined' && window.visualViewport;
 
 export function isScrollable(node: Element): boolean {
@@ -278,13 +277,13 @@ function setStyle(
   value: string,
 ) {
   // https://github.com/microsoft/TypeScript/issues/17827#issuecomment-391663310
-  // @ts-ignore
+  // @ts-expect-error See comment above
   const cur = element.style[style];
-  // @ts-ignore
+  // @ts-expect-error See comment above
   element.style[style] = value;
 
   return () => {
-    // @ts-ignore
+    // @ts-expect-error See comment above
     element.style[style] = cur;
   };
 }

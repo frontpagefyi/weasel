@@ -28,6 +28,7 @@
     "forceConsistentCasingInFileNames": true,
     "exactOptionalPropertyTypes": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "noImplicitAny": true
   }
 }

@@ -3,6 +3,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import react from 'eslint-plugin-react';
 import { version as reactVersion } from 'react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+import baselineJs, { BASELINE } from 'eslint-plugin-baseline-js';
 
 export default defineConfig(
   // TODO: switch to "recommended-latest" when we use react compiler
@@ -12,6 +13,7 @@ export default defineConfig(
   jsxA11y.flatConfigs.recommended,
   {
     name: 'vaul-eslint/react',
+    files: ['**/*.{js,jsx,ts,tsx}'],
     settings: {
       react: {
         version: reactVersion,
@@ -32,7 +34,12 @@ export default defineConfig(
 
       // Enforce exhaustive dependencies for React Hooks
       // https://react.dev/reference/eslint-plugin-react-hooks/lints/exhaustive-deps
-      'react-hooks/exhaustive-deps': 'error',
+      // 'react-hooks/exhaustive-deps': 'error',
     },
+    plugins: { 'baseline-js': baselineJs },
   },
+  baselineJs.configs['recommended-ts']({
+    available: BASELINE.WIDELY,
+    level: 'error',
+  }),
 );

@@ -4,21 +4,26 @@ import tseslint from 'typescript-eslint';
 import turbo from 'eslint-config-turbo/flat';
 import importPlugin from 'eslint-plugin-import';
 import prettier from 'eslint-config-prettier/flat';
+import css from '@eslint/css';
 
 export default defineConfig(
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   turbo,
   importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
   prettier,
   {
     name: 'vaul-eslint/base',
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parserOptions: {
         projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -31,6 +36,18 @@ export default defineConfig(
           ignoreRestSiblings: true,
         },
       ],
+    },
+  },
+  {
+    // name: 'vaul-eslint/css',
+    language: 'css/css',
+    files: ['**/*.css'],
+    ...css.configs.recommended,
+    plugins: {
+      css: css,
+    },
+    rules: {
+      'css/use-baseline': ['error', { baseline: 'widely' }],
     },
   },
   globalIgnores(

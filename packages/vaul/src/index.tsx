@@ -225,15 +225,6 @@ export function Root({
   );
   const initialDrawerHeight = React.useRef(0);
 
-  const onSnapPointChange = React.useCallback(
-    (activeSnapPointIndex: number) => {
-      // Change openTime ref when we reach the last snap point to prevent dragging for 500ms incase it's scrollable.
-      if (snapPoints && activeSnapPointIndex === snapPointsOffset.length - 1)
-        openTime.current = new Date();
-    },
-    [],
-  );
-
   const {
     activeSnapPoint,
     activeSnapPointIndex,
@@ -249,7 +240,12 @@ export function Root({
     drawerRef,
     fadeFromIndex,
     overlayRef,
-    onSnapPointChange,
+    onSnapPointChange: (index: number) => {
+      // Change openTime ref when we reach the last snap point to prevent dragging for 500ms in case it's scrollable.
+      if (snapPoints && index === snapPointsOffset.length - 1) {
+        openTime.current = new Date();
+      }
+    },
     direction,
     container,
     snapToSequentialPoint,
@@ -603,7 +599,13 @@ export function Root({
         'resize',
         onVisualViewportChange,
       );
-  }, [activeSnapPointIndex, snapPoints, snapPointsOffset]);
+  }, [
+    activeSnapPointIndex,
+    snapPoints,
+    snapPointsOffset,
+    fixed,
+    repositionInputs,
+  ]);
 
   function closeDrawer(fromWithin?: boolean) {
     cancelDrag();
@@ -1033,7 +1035,7 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(function (
         setDelayedSnapPoints(true);
       });
     }
-  }, []);
+  }, [hasSnapPoints]);
 
   function handleOnPointerUp(event: React.PointerEvent<HTMLDivElement> | null) {
     pointerStartRef.current = null;

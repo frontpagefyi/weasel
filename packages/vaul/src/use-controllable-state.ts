@@ -5,6 +5,7 @@ import { useLayoutEffect } from './use-layout-effect';
 
 // Prevent bundlers from trying to optimize the import
 const useInsertionEffect: typeof useLayoutEffect =
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
   (React as any)[' useInsertionEffect '.trim().toString()] || useLayoutEffect;
 
 type ChangeHandler<T> = (state: T) => void;
@@ -94,6 +95,7 @@ function useUncontrolledState<T>({
   return [value, setValue, onChangeRef];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isFunction(value: unknown): value is (...args: any[]) => any {
   return typeof value === 'function';
 }

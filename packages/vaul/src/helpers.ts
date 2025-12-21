@@ -81,9 +81,7 @@ export function getTranslate(
     return null;
   }
   const style = window.getComputedStyle(element);
-  const transform =
-    // @ts-ignore
-    style.transform || style.webkitTransform || style.mozTransform;
+  const transform = style.transform;
   let mat = transform.match(/^matrix3d\((.+)\)$/);
   if (mat) {
     // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d
@@ -121,7 +119,7 @@ export function chain<T>(...fns: T[]) {
   return (...args: T extends AnyFunction ? Parameters<T> : never) => {
     for (const fn of fns) {
       if (typeof fn === 'function') {
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         fn(...args);
       }
     }
