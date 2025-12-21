@@ -2,10 +2,28 @@
   "name": "@repo/eslint-config",
   "private": true,
   "type": "module",
-  "devDependencies": {
-    "eslint": "catalog:"
+  "exports": {
+    "./*": "./*.ts"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@next/eslint-plugin-next": "^16.1.0",
+    "@repo/typescript-config": "workspace:^",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-config-turbo": "^2.7.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "react": "catalog:",
+    "typescript": "catalog:",
     "typescript-eslint": "^8.50.0"
+  },
+  "peerDependencies": {
+    "eslint": "catalog:"
   }
 }

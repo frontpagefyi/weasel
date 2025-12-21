@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --flag unstable_native_nodejs_ts_config .",
     "test": "playwright test"
   },
   "devDependencies": {
+    "@repo/typescript-config": "workspace:^",
+    "@repo/eslint-config": "workspace:^",
     "@playwright/test": "^1.57.0",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
@@ -18,6 +20,9 @@
     "eslint": "catalog:",
     "postcss": "8.4.29",
     "typescript": "catalog:"
+  },
+  "imports": {
+    "#/*": "./src/*"
   },
   "dependencies": {
     "clsx": "^2.0.0",

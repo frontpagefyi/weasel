@@ -53,7 +53,9 @@
     "prettier": "^2.5.1",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "@repo/typescript-config": "workspace:^",
+    "@repo/eslint-config": "workspace:^"
   },
   "peerDependencies": {
     "react": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc",

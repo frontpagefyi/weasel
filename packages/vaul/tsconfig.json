@@ -1,5 +1,7 @@
 {
+  "extends": "@repo/typescript-config",
   "compilerOptions": {
+    "outDir": "./dist",
     "jsx": "react",
     "target": "es2018",
     "moduleResolution": "node",
@@ -9,5 +11,6 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
