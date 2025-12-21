@@ -44,7 +44,7 @@ function DirectionalDrawer({
                 <a
                   href="https://www.radix-ui.com/docs/primitives/components/dialog"
                   className="underline"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   Radix&apos;s Dialog primitive
                 </a>{' '}
@@ -52,7 +52,7 @@ function DirectionalDrawer({
                 <a
                   href="https://twitter.com/devongovett/status/1674470185783402496"
                   className="underline"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   this tweet.
                 </a>
@@ -64,7 +64,7 @@ function DirectionalDrawer({
               <a
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://github.com/emilkowalski/vaul"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 GitHub
                 <svg
@@ -87,7 +87,7 @@ function DirectionalDrawer({
               <a
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://twitter.com/emilkowalski_"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 Twitter
                 <svg

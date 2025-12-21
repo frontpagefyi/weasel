@@ -16,11 +16,11 @@ const CenteredContent = () => {
       </p>
       <p className="text-zinc-600 mb-8">
         It uses{' '}
-        <a href="https://www.radix-ui.com/docs/primitives/components/dialog" className="underline" target="_blank">
+        <a href="https://www.radix-ui.com/docs/primitives/components/dialog" className="underline" target="_blank" rel="noreferrer">
           Radix&apos;s Dialog primitive
         </a>{' '}
         under the hood and is inspired by{' '}
-        <a href="https://twitter.com/devongovett/status/1674470185783402496" className="underline" target="_blank">
+        <a href="https://twitter.com/devongovett/status/1674470185783402496" className="underline" target="_blank" rel="noreferrer">
           this tweet.
         </a>
       </p>

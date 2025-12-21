@@ -42,16 +42,16 @@ function MyDrawer({
               <a
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://github.com/emilkowalski/vaul"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 GitHub
                 <svg
                   fill="none"
                   height="16"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   width="16"
                   aria-hidden="true"
@@ -65,16 +65,16 @@ function MyDrawer({
               <a
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://twitter.com/emilkowalski_"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 Twitter
                 <svg
                   fill="none"
                   height="16"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   width="16"
                   aria-hidden="true"
@@ -111,7 +111,7 @@ function MyDrawer2({ open, setOpen }: { open: boolean; setOpen: (open: boolean) 
                 <a
                   href="https://www.radix-ui.com/docs/primitives/components/dialog"
                   className="underline"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   Radix&rsquo;s Dialog primitive
                 </a>{' '}
@@ -119,7 +119,7 @@ function MyDrawer2({ open, setOpen }: { open: boolean; setOpen: (open: boolean) 
                 <a
                   href="https://twitter.com/devongovett/status/1674470185783402496"
                   className="underline"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   this tweet.
                 </a>
@@ -141,16 +141,16 @@ function MyDrawer2({ open, setOpen }: { open: boolean; setOpen: (open: boolean) 
               <a
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://github.com/emilkowalski/vaul"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 GitHub
                 <svg
                   fill="none"
                   height="16"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   width="16"
                   aria-hidden="true"
@@ -164,16 +164,16 @@ function MyDrawer2({ open, setOpen }: { open: boolean; setOpen: (open: boolean) 
               <a
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://twitter.com/emilkowalski_"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 Twitter
                 <svg
                   fill="none"
                   height="16"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   width="16"
                   aria-hidden="true"
