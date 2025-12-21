@@ -1,14 +1,7 @@
 {
-  "extends": "@repo/typescript-config",
+  "extends": "@repo/typescript-config/base",
   "compilerOptions": {
     "outDir": "./dist",
-    "jsx": "react",
-    "target": "es2018",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "lib": ["es2015", "dom"],
-    "skipLibCheck": true,
-    "strict": true,
     "noEmit": true
   },
   "include": ["src"],
