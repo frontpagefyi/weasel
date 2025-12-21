@@ -888,11 +888,11 @@ export function Root({
       <DrawerContext.Provider
         value={{
           activeSnapPoint,
-          snapPoints,
+          snapPoints: snapPoints ?? null,
           setActiveSnapPoint,
           drawerRef,
           overlayRef,
-          onOpenChange,
+          ...(onOpenChange ? { onOpenChange } : {}),
           onPress,
           onRelease,
           onDrag,
@@ -1267,7 +1267,7 @@ export function NestedRoot({
   return (
     <Root
       nested
-      open={nestedIsOpen}
+      {...(nestedIsOpen !== undefined ? { open: nestedIsOpen } : {})}
       onClose={() => {
         onNestedOpenChange(false);
       }}
