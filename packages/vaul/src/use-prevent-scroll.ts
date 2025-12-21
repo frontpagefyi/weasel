@@ -5,7 +5,8 @@ import { isIOS } from './browser';
 
 const KEYBOARD_BUFFER = 24;
 
-export const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+export const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 interface PreventScrollOptions {
   /** Whether the scroll lock is disabled. */
@@ -28,7 +29,9 @@ const visualViewport = typeof document !== 'undefined' && window.visualViewport;
 
 export function isScrollable(node: Element): boolean {
   const style = window.getComputedStyle(node);
-  return /(auto|scroll)/.test(style.overflow + style.overflowX + style.overflowY);
+  return /(auto|scroll)/.test(
+    style.overflow + style.overflowX + style.overflowY,
+  );
 }
 
 export function getScrollParent(node: Element): Element {
@@ -121,16 +124,25 @@ function preventScrollMobileSafari() {
   const onTouchStart = (e: TouchEvent) => {
     // Store the nearest scrollable parent element from the element that the user touched.
     scrollable = getScrollParent(e.target as Element);
-    if (scrollable === document.documentElement && scrollable === document.body) {
+    if (
+      scrollable === document.documentElement &&
+      scrollable === document.body
+    ) {
       return;
     }
 
-    lastY = e.changedTouches[0].pageY;
+    const touch = e.changedTouches[0];
+    if (!touch) return;
+    lastY = touch.pageY;
   };
 
   const onTouchMove = (e: TouchEvent) => {
     // Prevent scrolling the window.
-    if (!scrollable || scrollable === document.documentElement || scrollable === document.body) {
+    if (
+      !scrollable ||
+      scrollable === document.documentElement ||
+      scrollable === document.body
+    ) {
       e.preventDefault();
       return;
     }
@@ -139,7 +151,10 @@ function preventScrollMobileSafari() {
     // of a nested scrollable area, otherwise mobile Safari will start scrolling
     // the window instead. Unfortunately, this disables bounce scrolling when at
     // the top but it's the best we can do.
-    const y = e.changedTouches[0].pageY;
+    const touch = e.changedTouches[0];
+    if (!touch) return;
+
+    const y = touch.pageY;
     const scrollTop = scrollable.scrollTop;
     const bottom = scrollable.scrollHeight - scrollable.clientHeight;
 
@@ -195,7 +210,11 @@ function preventScrollMobileSafari() {
           } else {
             // Otherwise, wait for the visual viewport to resize before scrolling so we can
             // measure the correct position to scroll to.
-            visualViewport.addEventListener('resize', () => scrollIntoView(target), { once: true });
+            visualViewport.addEventListener(
+              'resize',
+              () => scrollIntoView(target),
+              { once: true },
+            );
           }
         }
       });
@@ -215,7 +234,11 @@ function preventScrollMobileSafari() {
   const scrollY = window.pageYOffset;
 
   const restoreStyles = chain(
-    setStyle(document.documentElement, 'paddingRight', `${window.innerWidth - document.documentElement.clientWidth}px`),
+    setStyle(
+      document.documentElement,
+      'paddingRight',
+      `${window.innerWidth - document.documentElement.clientWidth}px`,
+    ),
     // setStyle(document.documentElement, 'overflow', 'hidden'),
     // setStyle(document.body, 'marginTop', `-${scrollY}px`),
   );
@@ -224,9 +247,18 @@ function preventScrollMobileSafari() {
   window.scrollTo(0, 0);
 
   const removeEvents = chain(
-    addEvent(document, 'touchstart', onTouchStart, { passive: false, capture: true }),
-    addEvent(document, 'touchmove', onTouchMove, { passive: false, capture: true }),
-    addEvent(document, 'touchend', onTouchEnd, { passive: false, capture: true }),
+    addEvent(document, 'touchstart', onTouchStart, {
+      passive: false,
+      capture: true,
+    }),
+    addEvent(document, 'touchmove', onTouchMove, {
+      passive: false,
+      capture: true,
+    }),
+    addEvent(document, 'touchend', onTouchEnd, {
+      passive: false,
+      capture: true,
+    }),
     addEvent(document, 'focus', onFocus, true),
     addEvent(window, 'scroll', onWindowScroll),
   );
@@ -240,7 +272,11 @@ function preventScrollMobileSafari() {
 }
 
 // Sets a CSS property on an element, and returns a function to revert it to the previous value.
-function setStyle(element: HTMLElement, style: keyof React.CSSProperties, value: string) {
+function setStyle(
+  element: HTMLElement,
+  style: keyof React.CSSProperties,
+  value: string,
+) {
   // https://github.com/microsoft/TypeScript/issues/17827#issuecomment-391663310
   // @ts-ignore
   const cur = element.style[style];
@@ -274,12 +310,17 @@ function scrollIntoView(target: Element) {
   while (target && target !== root) {
     // Find the parent scrollable element and adjust the scroll position if the target is not already in view.
     const scrollable = getScrollParent(target);
-    if (scrollable !== document.documentElement && scrollable !== document.body && scrollable !== target) {
+    if (
+      scrollable !== document.documentElement &&
+      scrollable !== document.body &&
+      scrollable !== target
+    ) {
       const scrollableTop = scrollable.getBoundingClientRect().top;
       const targetTop = target.getBoundingClientRect().top;
       const targetBottom = target.getBoundingClientRect().bottom;
       // Buffer is needed for some edge cases
-      const keyboardHeight = scrollable.getBoundingClientRect().bottom + KEYBOARD_BUFFER;
+      const keyboardHeight =
+        scrollable.getBoundingClientRect().bottom + KEYBOARD_BUFFER;
 
       if (targetBottom > keyboardHeight) {
         scrollable.scrollTop += targetTop - scrollableTop;
@@ -293,7 +334,8 @@ function scrollIntoView(target: Element) {
 
 export function isInput(target: Element) {
   return (
-    (target instanceof HTMLInputElement && !nonTextInputTypes.has(target.type)) ||
+    (target instanceof HTMLInputElement &&
+      !nonTextInputTypes.has(target.type)) ||
     target instanceof HTMLTextAreaElement ||
     (target instanceof HTMLElement && target.isContentEditable)
   );
