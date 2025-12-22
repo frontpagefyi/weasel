@@ -30,6 +30,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^16.5.0",
     "react": "catalog:",
+    "tailwind-csstree": "^0.1.4",
     "typescript": "catalog:",
     "typescript-eslint": "^8.50.0"
   },
