@@ -12,23 +12,23 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:^",
-    "@repo/eslint-config": "workspace:^",
     "@playwright/test": "^1.57.0",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "autoprefixer": "10.4.15",
     "eslint": "catalog:",
     "postcss": "8.4.29",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "@tailwindcss/postcss": "^4.1.18"
   },
   "dependencies": {
     "clsx": "^2.0.0",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "tailwindcss": "3.3.3",
+    "tailwindcss": "^4.1.18",
     "vaul": "workspace:^"
   }
 }

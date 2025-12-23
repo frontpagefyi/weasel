@@ -28,7 +28,7 @@ export default function Page() {
               Close
             </button>
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
-              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
+              <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">
                 <Drawer.Title className="font-medium mb-4">
                   Unstyled drawer for React.
@@ -62,7 +62,7 @@ export default function Page() {
             <div className="p-4 bg-zinc-100 border-t border-zinc-200 mt-auto">
               <div className="flex gap-6 justify-end max-w-md mx-auto">
                 <a
-                  className="text-xs text-zinc-600 flex items-center gap-0.25"
+                  className="text-xs text-zinc-600 flex items-center gap-px"
                   href="https://github.com/emilkowalski/vaul"
                   target="_blank"
                   rel="noreferrer"
@@ -86,7 +86,7 @@ export default function Page() {
                   </svg>
                 </a>
                 <a
-                  className="text-xs text-zinc-600 flex items-center gap-0.25"
+                  className="text-xs text-zinc-600 flex items-center gap-px"
                   href="https://twitter.com/emilkowalski_"
                   target="_blank"
                   rel="noreferrer"
@@ -134,7 +134,7 @@ export default function Page() {
               Close
             </button>
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
-              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
+              <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">
                 <Drawer.Title className="font-medium mb-4">
                   Unstyled drawer for React.
@@ -168,7 +168,7 @@ export default function Page() {
             <div className="p-4 bg-zinc-100 border-t border-zinc-200 mt-auto">
               <div className="flex gap-6 justify-end max-w-md mx-auto">
                 <a
-                  className="text-xs text-zinc-600 flex items-center gap-0.25"
+                  className="text-xs text-zinc-600 flex items-center gap-px"
                   href="https://github.com/emilkowalski/vaul"
                   target="_blank"
                   rel="noreferrer"
@@ -192,7 +192,7 @@ export default function Page() {
                   </svg>
                 </a>
                 <a
-                  className="text-xs text-zinc-600 flex items-center gap-0.25"
+                  className="text-xs text-zinc-600 flex items-center gap-px"
                   href="https://twitter.com/emilkowalski_"
                   target="_blank"
                   rel="noreferrer"

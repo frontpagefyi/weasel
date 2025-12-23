@@ -12,59 +12,70 @@ export default function Page() {
       data-vaul-drawer-wrapper=""
     >
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <p>
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
-        faucibus mollis interdum.
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
+        at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas faucibus mollis interdum.
       </p>
       <Drawer.Root open={open} onOpenChange={setOpen}>
         <Drawer.Trigger asChild onClick={() => setOpen(true)}>
@@ -73,24 +84,31 @@ export default function Page() {
           </button>
         </Drawer.Trigger>
         <Drawer.Portal>
-          <Drawer.Overlay data-testid="overlay" className="fixed inset-0 bg-black/40" />
+          <Drawer.Overlay
+            data-testid="overlay"
+            className="fixed inset-0 bg-black/40"
+          />
           <Drawer.Content
             data-testid="content"
             className="bg-zinc-100 flex flex-col rounded-t-[10px] h-[96%] mt-24 fixed bottom-0 left-0 right-0"
           >
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
-              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
+              <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">
-                <Drawer.Title className="font-medium mb-4">Unstyled drawer for React.</Drawer.Title>
+                <Drawer.Title className="font-medium mb-4">
+                  Unstyled drawer for React.
+                </Drawer.Title>
                 <p className="text-zinc-600 mb-2">
-                  This component can be used as a replacement for a Dialog on mobile and tablet devices.
+                  This component can be used as a replacement for a Dialog on
+                  mobile and tablet devices.
                 </p>
                 <p className="text-zinc-600 mb-8">
                   It uses{' '}
                   <a
                     href="https://www.radix-ui.com/docs/primitives/components/dialog"
                     className="underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Radix&apos;s Dialog primitive
                   </a>{' '}
@@ -98,7 +116,8 @@ export default function Page() {
                   <a
                     href="https://twitter.com/devongovett/status/1674470185783402496"
                     className="underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     this tweet.
                   </a>
@@ -108,9 +127,10 @@ export default function Page() {
             <div className="p-4 bg-zinc-100 border-t border-zinc-200 mt-auto">
               <div className="flex gap-6 justify-end max-w-md mx-auto">
                 <a
-                  className="text-xs text-zinc-600 flex items-center gap-0.25"
+                  className="text-xs text-zinc-600 flex items-center gap-px"
                   href="https://github.com/emilkowalski/vaul"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   GitHub
                   <svg
@@ -131,9 +151,10 @@ export default function Page() {
                   </svg>
                 </a>
                 <a
-                  className="text-xs text-zinc-600 flex items-center gap-0.25"
+                  className="text-xs text-zinc-600 flex items-center gap-px"
                   href="https://twitter.com/emilkowalski_"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Twitter
                   <svg

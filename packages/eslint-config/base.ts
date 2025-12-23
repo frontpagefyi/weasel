@@ -9,7 +9,7 @@ import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import { createNodeResolver } from 'eslint-plugin-import-x';
-import { tailwind3 } from 'tailwind-csstree';
+import { tailwind4 } from 'tailwind-csstree';
 
 export default defineConfig(
   {
@@ -79,7 +79,7 @@ export default defineConfig(
     name: 'vaul-eslint/base/css',
     language: 'css/css',
     languageOptions: {
-      customSyntax: tailwind3,
+      customSyntax: tailwind4,
     },
     files: ['**/*.css'],
     plugins: {

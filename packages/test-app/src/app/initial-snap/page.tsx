@@ -29,7 +29,7 @@ export default function Page() {
         <Drawer.Portal>
           <Drawer.Content
             data-testid="content"
-            className="fixed flex flex-col bg-white border border-gray-200 border-b-none rounded-t-[10px] bottom-0 left-0 right-0 h-full max-h-[97%] mx-[-1px]"
+            className="fixed flex flex-col bg-white border border-gray-200 border-b-none rounded-t-[10px] bottom-0 left-0 right-0 h-full max-h-[97%] -mx-px"
           >
             <div
               className={clsx(
@@ -42,7 +42,7 @@ export default function Page() {
             >
               <div className="flex items-center">
                 <svg
-                  className="text-yellow-400 h-5 w-5 flex-shrink-0"
+                  className="text-yellow-400 h-5 w-5 shrink-0"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -54,7 +54,7 @@ export default function Page() {
                   ></path>
                 </svg>
                 <svg
-                  className="text-yellow-400 h-5 w-5 flex-shrink-0"
+                  className="text-yellow-400 h-5 w-5 shrink-0"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -66,7 +66,7 @@ export default function Page() {
                   ></path>
                 </svg>
                 <svg
-                  className="text-yellow-400 h-5 w-5 flex-shrink-0"
+                  className="text-yellow-400 h-5 w-5 shrink-0"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -78,7 +78,7 @@ export default function Page() {
                   ></path>
                 </svg>
                 <svg
-                  className="text-yellow-400 h-5 w-5 flex-shrink-0"
+                  className="text-yellow-400 h-5 w-5 shrink-0"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -90,7 +90,7 @@ export default function Page() {
                   ></path>
                 </svg>
                 <svg
-                  className="text-gray-300 h-5 w-5 flex-shrink-0"
+                  className="text-gray-300 h-5 w-5 shrink-0"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -114,7 +114,7 @@ export default function Page() {
                 learn something cool. To the untrained eye, a beautifully
                 designed UI.
               </p>
-              <button className="bg-black text-gray-50 mt-8 rounded-md h-[48px] flex-shrink-0 font-medium">
+              <button className="bg-black text-gray-50 mt-8 rounded-md h-12 shrink-0 font-medium">
                 Buy for $199
               </button>
               <div className="mt-12">

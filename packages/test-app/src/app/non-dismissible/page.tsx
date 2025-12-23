@@ -18,7 +18,7 @@ export default function Page() {
             className="bg-zinc-100 flex flex-col rounded-t-[10px] mt-24 fixed bottom-0 left-0 right-0"
           >
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
-              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
+              <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">
                 <Drawer.Title className="font-medium mb-4">Unstyled drawer for React.</Drawer.Title>
                 <p className="text-zinc-600 mb-2">
@@ -47,7 +47,7 @@ export default function Page() {
                   type="button"
                   data-testid="dismiss-button"
                   onClick={() => setOpen(false)}
-                  className="rounded-md mb-6 w-full bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                  className="rounded-md mb-6 w-full bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
                 >
                   Click to close
                 </button>
