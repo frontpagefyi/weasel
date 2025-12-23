@@ -6,8 +6,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "style.css"
+    "dist"
   ],
   "exports": {
     ".": {
@@ -15,8 +14,7 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       }
-    },
-    "./style.css": "./dist/style.css"
+    }
   },
   "scripts": {
     "type-check": "tsc --noEmit",
@@ -49,7 +47,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "bunchee": "^5.1.5",
+    "bunchee": "^6.6.2",
     "eslint": "catalog:",
     "globals": "^16.5.0",
     "ncp": "^2.0.0",
