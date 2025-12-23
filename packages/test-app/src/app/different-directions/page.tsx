@@ -28,8 +28,8 @@ function DirectionalDrawer({
           className={clsx('bg-zinc-100 flex flex-col rounded-t-[10px] fixed ', {
             'bottom-0 mt-24 left-0 right-0 h-[96%]': direction === 'bottom',
             'top-0 mb-24 left-0 right-0 h-[96%]': direction === 'top',
-            'left-0 top-0 bottom-0 w-[300px] h-full': direction === 'left',
-            'right-0 top-0 bottom-0 w-[300px] h-full': direction === 'right',
+            'left-0 top-0 bottom-0 w-75 h-full': direction === 'left',
+            'right-0 top-0 bottom-0 w-75 h-full': direction === 'right',
           })}
         >
           <Drawer.Close data-testid="drawer-close">Close</Drawer.Close>
@@ -37,7 +37,7 @@ function DirectionalDrawer({
             Close
           </button>
           <div className="p-4 bg-white rounded-t-[10px] flex-1">
-            <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
+            <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
             <div className="max-w-md mx-auto">
               <Drawer.Title className="font-medium mb-4">
                 Unstyled drawer for React.
@@ -71,7 +71,7 @@ function DirectionalDrawer({
           <div className="p-4 bg-zinc-100 border-t border-zinc-200 mt-auto">
             <div className="flex gap-6 justify-end max-w-md mx-auto">
               <a
-                className="text-xs text-zinc-600 flex items-center gap-0.25"
+                className="text-xs text-zinc-600 flex items-center gap-px"
                 href="https://github.com/emilkowalski/vaul"
                 target="_blank"
                 rel="noreferrer"
@@ -95,7 +95,7 @@ function DirectionalDrawer({
                 </svg>
               </a>
               <a
-                className="text-xs text-zinc-600 flex items-center gap-0.25"
+                className="text-xs text-zinc-600 flex items-center gap-px"
                 href="https://twitter.com/emilkowalski_"
                 target="_blank"
                 rel="noreferrer"

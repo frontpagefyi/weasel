@@ -4,7 +4,10 @@ import { Drawer } from 'vaul';
 
 export default function Page() {
   return (
-    <div className="w-screen h-screen bg-white p-8 flex justify-center items-center" data-vaul-drawer-wrapper="">
+    <div
+      className="w-screen h-screen bg-white p-8 flex justify-center items-center"
+      data-vaul-drawer-wrapper=""
+    >
       <Drawer.Root>
         <Drawer.Trigger asChild>
           <button data-testid="trigger">Open Drawer</button>
@@ -16,19 +19,25 @@ export default function Page() {
             className="bg-gray-100 flex flex-col rounded-t-[10px] h-full mt-24 max-h-[96%] fixed bottom-0 left-0 right-0"
           >
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
-              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-gray-300 mb-8" />
+              <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-gray-300 mb-8" />
               <div className="max-w-md mx-auto">
-                <Drawer.Title className="font-medium mb-4">Drawer for React.</Drawer.Title>
+                <Drawer.Title className="font-medium mb-4">
+                  Drawer for React.
+                </Drawer.Title>
                 <p className="text-gray-600 mb-2">
-                  This component can be used as a Dialog replacement on mobile and tablet devices.
+                  This component can be used as a Dialog replacement on mobile
+                  and tablet devices.
                 </p>
-                <p className="text-gray-600 mb-2">It comes unstyled and has gesture-driven animations.</p>
+                <p className="text-gray-600 mb-2">
+                  It comes unstyled and has gesture-driven animations.
+                </p>
                 <p className="text-gray-600 mb-6">
                   It uses{' '}
                   <a
                     href="https://www.radix-ui.com/docs/primitives/components/dialog"
                     className="underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Radix&rsquo;s Dialog primitive
                   </a>{' '}
@@ -36,7 +45,8 @@ export default function Page() {
                   <a
                     href="https://twitter.com/devongovett/status/1674470185783402496"
                     className="underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     this tweet.
                   </a>
@@ -44,7 +54,7 @@ export default function Page() {
                 <Drawer.NestedRoot>
                   <Drawer.Trigger
                     data-testid="nested-trigger"
-                    className="rounded-md mb-6 w-full bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                    className="rounded-md mb-6 w-full bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
                   >
                     Open Second Drawer
                   </Drawer.Trigger>
@@ -54,21 +64,30 @@ export default function Page() {
                       data-testid="nested-content"
                       className="bg-gray-100 flex flex-col rounded-t-[10px] h-full mt-24 max-h-[94%] fixed bottom-0 left-0 right-0"
                     >
-                      <Drawer.Close data-testid="nested-close">Close</Drawer.Close>
+                      <Drawer.Close data-testid="nested-close">
+                        Close
+                      </Drawer.Close>
                       <div className="p-4 bg-white rounded-t-[10px] flex-1">
-                        <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-gray-300 mb-8" />
+                        <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-gray-300 mb-8" />
                         <div className="max-w-md mx-auto">
-                          <Drawer.Title className="font-medium mb-4">This drawer is nested.</Drawer.Title>
+                          <Drawer.Title className="font-medium mb-4">
+                            This drawer is nested.
+                          </Drawer.Title>
                           <p className="text-gray-600 mb-2">
-                            Place a <span className="font-mono text-[15px] font-semibold">`Drawer.NestedRoot`</span>{' '}
-                            inside another drawer and it will be nested automatically for you.
+                            Place a{' '}
+                            <span className="font-mono text-[15px] font-semibold">
+                              `Drawer.NestedRoot`
+                            </span>{' '}
+                            inside another drawer and it will be nested
+                            automatically for you.
                           </p>
                           <p className="text-gray-600 mb-2">
                             You can view more examples{' '}
                             <a
                               href="https://github.com/emilkowalski/vaul#examples"
                               className="underline"
-                              target="_blank" rel="noreferrer"
+                              target="_blank"
+                              rel="noreferrer"
                             >
                               here
                             </a>
@@ -79,9 +98,10 @@ export default function Page() {
                       <div className="p-4 bg-gray-100 border-t border-gray-200 mt-auto">
                         <div className="flex gap-6 justify-end max-w-md mx-auto">
                           <a
-                            className="text-xs text-gray-600 flex items-center gap-0.25"
+                            className="text-xs text-gray-600 flex items-center gap-px"
                             href="https://github.com/emilkowalski/vaul"
-                            target="_blank" rel="noreferrer"
+                            target="_blank"
+                            rel="noreferrer"
                           >
                             GitHub
                             <svg
@@ -102,9 +122,10 @@ export default function Page() {
                             </svg>
                           </a>
                           <a
-                            className="text-xs text-gray-600 flex items-center gap-0.25"
+                            className="text-xs text-gray-600 flex items-center gap-px"
                             href="https://twitter.com/emilkowalski_"
-                            target="_blank" rel="noreferrer"
+                            target="_blank"
+                            rel="noreferrer"
                           >
                             Twitter
                             <svg
@@ -134,9 +155,10 @@ export default function Page() {
             <div className="p-4 bg-gray-100 border-t border-gray-200 mt-auto">
               <div className="flex gap-6 justify-end max-w-md mx-auto">
                 <a
-                  className="text-xs text-gray-600 flex items-center gap-0.25"
+                  className="text-xs text-gray-600 flex items-center gap-px"
                   href="https://github.com/emilkowalski/vaul"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   GitHub
                   <svg
@@ -157,9 +179,10 @@ export default function Page() {
                   </svg>
                 </a>
                 <a
-                  className="text-xs text-gray-600 flex items-center gap-0.25"
+                  className="text-xs text-gray-600 flex items-center gap-px"
                   href="https://twitter.com/emilkowalski_"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Twitter
                   <svg

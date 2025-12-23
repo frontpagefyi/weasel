@@ -20,7 +20,7 @@ export default function Page() {
           >
             <Drawer.Close data-testid="drawer-close">Close</Drawer.Close>
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
-              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
+              <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">
                 <Drawer.Title className="font-medium mb-4">Redirect to another route.</Drawer.Title>
                 <p className="text-zinc-600 mb-2">This route is only used to test the body reset position.</p>
