@@ -28,7 +28,7 @@
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "tailwindcss": "4.1.18",
+    "tailwindcss": "^4.1.18",
     "vaul": "workspace:^"
   }
 }
