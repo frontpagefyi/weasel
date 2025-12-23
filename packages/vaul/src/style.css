@@ -78,6 +78,7 @@
 }
 
 [data-vaul-animate='false'] {
+  /* eslint-disable-next-line css/no-important -- respect the setting */
   animation: none !important;
 }
 
@@ -129,9 +130,9 @@
   width: 200%;
 }
 
-[data-vaul-overlay][data-vaul-snap-points='true']:not([data-vaul-snap-points-overlay='true']):not(
-    [data-state='closed']
-  ) {
+[data-vaul-overlay][data-vaul-snap-points='true']:not(
+    [data-vaul-snap-points-overlay='true']
+  ):not([data-state='closed']) {
   opacity: 0;
 }
 
@@ -169,6 +170,8 @@
 
 @media (hover: hover) and (pointer: fine) {
   [data-vaul-drawer] {
+    -webkit-user-select: none;
+    /* eslint-disable-next-line css/use-baseline -- It's fine to not have this for iOS webview and opera mini since it shouldn't break anything */
     user-select: none;
   }
 }

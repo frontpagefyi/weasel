@@ -1,5 +1,5 @@
-import React from 'react';
-import { DrawerDirection } from './types';
+import * as React from 'react';
+import type { ActiveSnapPoint, DrawerDirection, SnapPoints } from './types';
 
 interface DrawerContextValue {
   drawerRef: React.RefObject<HTMLDivElement | null>;
@@ -7,30 +7,36 @@ interface DrawerContextValue {
   onPress: (event: React.PointerEvent<HTMLDivElement>) => void;
   onRelease: (event: React.PointerEvent<HTMLDivElement> | null) => void;
   onDrag: (event: React.PointerEvent<HTMLDivElement>) => void;
-  onNestedDrag: (event: React.PointerEvent<HTMLDivElement>, percentageDragged: number) => void;
+  onNestedDrag: (
+    event: React.PointerEvent<HTMLDivElement>,
+    percentageDragged: number,
+  ) => void;
   onNestedOpenChange: (o: boolean) => void;
-  onNestedRelease: (event: React.PointerEvent<HTMLDivElement>, open: boolean) => void;
+  onNestedRelease: (
+    event: React.PointerEvent<HTMLDivElement>,
+    open: boolean,
+  ) => void;
   dismissible: boolean;
   isOpen: boolean;
   isDragging: boolean;
-  keyboardIsOpen: React.MutableRefObject<boolean>;
+  keyboardIsOpen: React.RefObject<boolean>;
   snapPointsOffset: number[] | null;
-  snapPoints?: (number | string)[] | null;
+  snapPoints?: SnapPoints | null;
   activeSnapPointIndex?: number | null;
   modal: boolean;
   shouldFade: boolean;
-  activeSnapPoint?: number | string | null;
-  setActiveSnapPoint: (o: number | string | null) => void;
+  activeSnapPoint?: ActiveSnapPoint;
+  setActiveSnapPoint: (o: ActiveSnapPoint) => void;
   closeDrawer: () => void;
-  openProp?: boolean;
-  onOpenChange?: (o: boolean) => void;
+  openProp?: boolean | undefined;
+  onOpenChange?: (o: boolean) => void | undefined;
   direction: DrawerDirection;
   shouldScaleBackground: boolean;
   setBackgroundColorOnScale: boolean;
-  noBodyStyles: boolean;
-  handleOnly?: boolean;
-  container?: HTMLElement | null;
-  autoFocus?: boolean;
+  noBodyStyles: boolean | undefined;
+  handleOnly?: boolean | undefined;
+  container?: HTMLElement | null | undefined;
+  autoFocus?: boolean | undefined;
   shouldAnimate?: React.RefObject<boolean>;
 }
 

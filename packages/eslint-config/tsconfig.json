@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "include": ["base.js", "react.js", "next.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "checkJs": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+  },
+}

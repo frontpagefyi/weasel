@@ -1,14 +1,23 @@
-import React, { useMemo } from 'react';
+import * as React from 'react';
 import { useDrawerContext } from './context';
-import { assignStyle, chain, isVertical, reset } from './helpers';
+import { assignStyle, chain, isVertical } from './helpers';
 import { BORDER_RADIUS, TRANSITIONS, WINDOW_TOP_OFFSET } from './constants';
 
 const noop = () => () => {};
 
 export function useScaleBackground() {
-  const { direction, isOpen, shouldScaleBackground, setBackgroundColorOnScale, noBodyStyles } = useDrawerContext();
+  const {
+    direction,
+    isOpen,
+    shouldScaleBackground,
+    setBackgroundColorOnScale,
+    noBodyStyles,
+  } = useDrawerContext();
   const timeoutIdRef = React.useRef<number | null>(null);
-  const initialBackgroundColor = useMemo(() => document.body.style.backgroundColor, []);
+  const initialBackgroundColor = React.useMemo(
+    () => document.body.style.backgroundColor,
+    [],
+  );
 
   function getScale() {
     return (window.innerWidth - WINDOW_TOP_OFFSET) / window.innerWidth;
@@ -24,12 +33,16 @@ export function useScaleBackground() {
       if (!wrapper) return;
 
       chain(
-        setBackgroundColorOnScale && !noBodyStyles ? assignStyle(document.body, { background: 'black' }) : noop,
+        setBackgroundColorOnScale && !noBodyStyles
+          ? assignStyle(document.body, { background: 'black' })
+          : noop,
         assignStyle(wrapper, {
           transformOrigin: isVertical(direction) ? 'top' : 'left',
           transitionProperty: 'transform, border-radius',
           transitionDuration: `${TRANSITIONS.DURATION}s`,
-          transitionTimingFunction: `cubic-bezier(${TRANSITIONS.EASE.join(',')})`,
+          transitionTimingFunction: `cubic-bezier(${TRANSITIONS.EASE.join(
+            ',',
+          )})`,
         }),
       );
 
@@ -56,5 +69,12 @@ export function useScaleBackground() {
         }, TRANSITIONS.DURATION * 1000);
       };
     }
-  }, [isOpen, shouldScaleBackground, initialBackgroundColor]);
+  }, [
+    isOpen,
+    shouldScaleBackground,
+    initialBackgroundColor,
+    direction,
+    setBackgroundColorOnScale,
+    noBodyStyles,
+  ]);
 }

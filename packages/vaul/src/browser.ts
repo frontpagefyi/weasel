@@ -32,5 +32,8 @@ export function isIOS(): boolean | undefined {
 }
 
 export function testPlatform(re: RegExp): boolean | undefined {
-  return typeof window !== 'undefined' && window.navigator != null ? re.test(window.navigator.platform) : undefined;
+  // TODO: Replace with navigator.userAgentData.platform when available, otherwise fall back to navigator.platform
+  return typeof window !== 'undefined' && window.navigator != null
+    ? re.test(window.navigator.platform)
+    : undefined;
 }

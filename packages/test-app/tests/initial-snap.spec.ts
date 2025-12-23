@@ -1,4 +1,5 @@
-import { Page, expect, test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
+import type { Page } from '@playwright/test';
 import { ANIMATION_DURATION } from './constants';
 
 test.beforeEach(async ({ page }) => {
@@ -12,7 +13,12 @@ const snapPointYPositions = {
   3: 200,
 } as const;
 
-const snapTo = async (page: Page, snapPointIndex: keyof typeof snapPointYPositions) => {
+// TODO: See if these tests are meant to be disabled
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const snapTo = async (
+  page: Page,
+  snapPointIndex: keyof typeof snapPointYPositions,
+) => {
   await page.hover('[data-vaul-drawer]');
   await page.mouse.down();
   await page.mouse.move(0, snapPointYPositions[snapPointIndex]);

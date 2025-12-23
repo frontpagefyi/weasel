@@ -28,7 +28,7 @@ export default function Page() {
                   <a
                     href="https://www.radix-ui.com/docs/primitives/components/dialog"
                     className="underline"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     Radix&rsquo;s Dialog primitive
                   </a>{' '}
@@ -36,7 +36,7 @@ export default function Page() {
                   <a
                     href="https://twitter.com/devongovett/status/1674470185783402496"
                     className="underline"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     this tweet.
                   </a>
@@ -68,7 +68,7 @@ export default function Page() {
                             <a
                               href="https://github.com/emilkowalski/vaul#examples"
                               className="underline"
-                              target="_blank"
+                              target="_blank" rel="noreferrer"
                             >
                               here
                             </a>
@@ -81,7 +81,7 @@ export default function Page() {
                           <a
                             className="text-xs text-gray-600 flex items-center gap-0.25"
                             href="https://github.com/emilkowalski/vaul"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             GitHub
                             <svg
@@ -104,7 +104,7 @@ export default function Page() {
                           <a
                             className="text-xs text-gray-600 flex items-center gap-0.25"
                             href="https://twitter.com/emilkowalski_"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Twitter
                             <svg
@@ -136,7 +136,7 @@ export default function Page() {
                 <a
                   className="text-xs text-gray-600 flex items-center gap-0.25"
                   href="https://github.com/emilkowalski/vaul"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   GitHub
                   <svg
@@ -159,7 +159,7 @@ export default function Page() {
                 <a
                   className="text-xs text-gray-600 flex items-center gap-0.25"
                   href="https://twitter.com/emilkowalski_"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   Twitter
                   <svg

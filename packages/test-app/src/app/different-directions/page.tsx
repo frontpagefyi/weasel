@@ -1,7 +1,8 @@
 'use client';
 
-import clsx from 'clsx';
-import { Drawer, DialogProps } from 'vaul';
+import { clsx } from 'clsx';
+import { Drawer } from 'vaul';
+import type { DialogProps } from 'vaul';
 
 function DirectionalDrawer({
   direction,
@@ -18,7 +19,10 @@ function DirectionalDrawer({
         </button>
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay data-testid="overlay" className="fixed inset-0 bg-black/40" />
+        <Drawer.Overlay
+          data-testid="overlay"
+          className="fixed inset-0 bg-black/40"
+        />
         <Drawer.Content
           data-testid="content"
           className={clsx('bg-zinc-100 flex flex-col rounded-t-[10px] fixed ', {
@@ -35,9 +39,12 @@ function DirectionalDrawer({
           <div className="p-4 bg-white rounded-t-[10px] flex-1">
             <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
             <div className="max-w-md mx-auto">
-              <Drawer.Title className="font-medium mb-4">Unstyled drawer for React.</Drawer.Title>
+              <Drawer.Title className="font-medium mb-4">
+                Unstyled drawer for React.
+              </Drawer.Title>
               <p className="text-zinc-600 mb-2">
-                This component can be used as a replacement for a Dialog on mobile and tablet devices.
+                This component can be used as a replacement for a Dialog on
+                mobile and tablet devices.
               </p>
               <p className="text-zinc-600 mb-8">
                 It uses{' '}
@@ -45,6 +52,7 @@ function DirectionalDrawer({
                   href="https://www.radix-ui.com/docs/primitives/components/dialog"
                   className="underline"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Radix&apos;s Dialog primitive
                 </a>{' '}
@@ -53,6 +61,7 @@ function DirectionalDrawer({
                   href="https://twitter.com/devongovett/status/1674470185783402496"
                   className="underline"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   this tweet.
                 </a>
@@ -65,6 +74,7 @@ function DirectionalDrawer({
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://github.com/emilkowalski/vaul"
                 target="_blank"
+                rel="noreferrer"
               >
                 GitHub
                 <svg
@@ -88,6 +98,7 @@ function DirectionalDrawer({
                 className="text-xs text-zinc-600 flex items-center gap-0.25"
                 href="https://twitter.com/emilkowalski_"
                 target="_blank"
+                rel="noreferrer"
               >
                 Twitter
                 <svg

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { isSafari } from './browser';
 
 let previousBodyPosition: Record<string, string> | null = null;
@@ -27,7 +27,9 @@ export function usePositionFixed({
   preventScrollRestoration: boolean;
   noBodyStyles: boolean;
 }) {
-  const [activeUrl, setActiveUrl] = React.useState(() => (typeof window !== 'undefined' ? window.location.href : ''));
+  const [activeUrl, setActiveUrl] = React.useState(() =>
+    typeof window !== 'undefined' ? window.location.href : '',
+  );
   const scrollPos = React.useRef(0);
 
   const setPositionFixed = React.useCallback(() => {
@@ -62,13 +64,15 @@ export function usePositionFixed({
             const bottomBarHeight = innerHeight - window.innerHeight;
             if (bottomBarHeight && scrollPos.current >= innerHeight) {
               // Move the content further up so that the bottom bar doesn't hide it
-              document.body.style.top = `${-(scrollPos.current + bottomBarHeight)}px`;
+              document.body.style.top = `${-(
+                scrollPos.current + bottomBarHeight
+              )}px`;
             }
           }),
         300,
       );
     }
-  }, [isOpen]);
+  }, [isOpen, noBodyStyles]);
 
   const restorePositionSetting = React.useCallback(() => {
     // All browsers on iOS will return true here.
@@ -93,7 +97,7 @@ export function usePositionFixed({
 
       previousBodyPosition = null;
     }
-  }, [activeUrl]);
+  }, [activeUrl, noBodyStyles, preventScrollRestoration]);
 
   React.useEffect(() => {
     function onScroll() {
@@ -128,8 +132,11 @@ export function usePositionFixed({
     // This is needed to force Safari toolbar to show **before** the drawer starts animating to prevent a gnarly shift from happening
     if (isOpen) {
       // avoid for standalone mode (PWA)
-      const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-      !isStandalone && setPositionFixed();
+      const isStandalone = window.matchMedia(
+        '(display-mode: standalone)',
+      ).matches;
+
+      if (!isStandalone) setPositionFixed();
 
       if (!modal) {
         window.setTimeout(() => {
@@ -139,7 +146,15 @@ export function usePositionFixed({
     } else {
       restorePositionSetting();
     }
-  }, [isOpen, hasBeenOpened, activeUrl, modal, nested, setPositionFixed, restorePositionSetting]);
+  }, [
+    isOpen,
+    hasBeenOpened,
+    activeUrl,
+    modal,
+    nested,
+    setPositionFixed,
+    restorePositionSetting,
+  ]);
 
   return { restorePositionSetting };
 }

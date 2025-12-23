@@ -1,0 +1,40 @@
+{
+  "name": "@repo/eslint-config",
+  "private": true,
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./*": "./*.ts"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.2",
+    "@next/eslint-plugin-next": "^16.1.0",
+    "@repo/typescript-config": "workspace:^",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@typescript-eslint/parser": "^8.50.0",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-config-turbo": "^2.7.1",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-baseline-js": "^0.4.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^16.5.0",
+    "react": "catalog:",
+    "tailwind-csstree": "^0.1.4",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.50.0"
+  },
+  "peerDependencies": {
+    "eslint": "catalog:"
+  }
+}

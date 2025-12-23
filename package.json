@@ -7,10 +7,11 @@
     "dev": "turbo run dev",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "check-types": "turbo run check-types",
+    "type-check": "turbo run type-check",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "eslint": "catalog:",
     "prettier": "^3.7.4",
     "turbo": "^2.6.3",
     "typescript": "^5.9.3"
