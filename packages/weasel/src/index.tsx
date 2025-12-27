@@ -60,7 +60,7 @@ export type DialogProps = {
    */
   closeThreshold?: number;
   /**
-   * When `true` the `body` doesn't get any styles assigned from Vaul
+   * When `true` the `body` doesn't get any styles assigned from Weasel
    */
   noBodyStyles?: boolean;
   onOpenChange?: (open: boolean) => void;
@@ -121,7 +121,7 @@ export type DialogProps = {
    */
   disablePreventScroll?: boolean;
   /**
-   * When `true` Vaul will reposition inputs rather than scroll then into view if the keyboard is in the way.
+   * When `true` Weasel will reposition inputs rather than scroll then into view if the keyboard is in the way.
    * Setting it to `false` will fall back to the default browser behavior.
    * @default true when {@link snapPoints} is defined
    */

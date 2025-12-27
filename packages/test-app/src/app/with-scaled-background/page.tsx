@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { clsx } from 'clsx';
-import { Drawer } from 'vaul';
+import { Drawer } from '@frontpage/weasel';
 
-// TODO: Export from Vaul
+// TODO: Export from Weasel
 export type DrawerDirection = 'top' | 'bottom' | 'left' | 'right';
 
 const CenteredContent = () => {

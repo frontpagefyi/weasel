@@ -7,7 +7,7 @@ export default defineConfig(
   base,
   react,
   {
-    name: 'vaul-eslint/vaul',
+    name: 'weasel-eslint/weasel',
     languageOptions: {
       globals: globals.browser,
     },

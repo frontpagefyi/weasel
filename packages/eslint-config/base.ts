@@ -13,15 +13,15 @@ import { tailwind4 } from 'tailwind-csstree';
 
 export default defineConfig(
   {
-    name: 'vaul-eslint/base',
+    name: 'weasel-eslint/base',
   },
   globalIgnores(
     ['.vercel/', '.turbo/', 'node_modules/'],
-    'vaul-eslint/base/ignores',
+    'weasel-eslint/base/ignores',
   ),
   turbo,
   {
-    name: 'vaul-eslint/base/typescript',
+    name: 'weasel-eslint/base/typescript',
     files: ['**/*.{js,jsx,ts,tsx,mjs,mts}'],
     plugins: {
       // @ts-expect-error -- types are incorrect but it stills works
@@ -76,7 +76,7 @@ export default defineConfig(
     },
   },
   {
-    name: 'vaul-eslint/base/css',
+    name: 'weasel-eslint/base/css',
     language: 'css/css',
     languageOptions: {
       customSyntax: tailwind4,
