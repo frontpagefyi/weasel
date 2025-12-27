@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { clsx } from 'clsx';
-import { Drawer } from 'vaul';
+import { Drawer } from '@frontpage/weasel';
 
 // TODO: Export from Vaul
 export type DrawerDirection = 'top' | 'bottom' | 'left' | 'right';

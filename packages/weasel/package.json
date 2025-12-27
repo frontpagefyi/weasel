@@ -1,6 +1,6 @@
 {
-  "name": "vaul",
-  "version": "1.1.2",
+  "name": "@frontpage/weasel",
+  "version": "1.2.0",
   "description": "Drawer component for React.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,15 +36,16 @@
     "dialog",
     "modal"
   ],
-  "author": "Emil Kowalski <e@emilkowal.ski>",
+  "author": "frontpage.fyi <team@frontpage.fyi>",
   "license": "MIT",
-  "homepage": "https://vaul.emilkowal.ski/",
+  "homepage": "https://github.com/frontpagefyi/weasel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/emilkowalski/vaul.git"
+    "url": "https://github.com/frontpagefyi/weasel.git",
+    "directory": "packages/weasel"
   },
   "bugs": {
-    "url": "https://github.com/emilkowalski/vaul/issues"
+    "url": "https://github.com/frontpagefyi/weasel/issues"
   },
   "devDependencies": {
     "@radix-ui/react-dialog": "^1.0.4",

@@ -1,6 +1,6 @@
 'use client';
 
-import { Drawer } from 'vaul';
+import { Drawer } from '@frontpage/weasel';
 
 export default function Page() {
   return (

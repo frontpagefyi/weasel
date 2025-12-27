@@ -7,7 +7,7 @@ import baselineJs, { BASELINE } from 'eslint-plugin-baseline-js';
 
 export default defineConfig(
   {
-    name: 'vaul-eslint/react',
+    name: 'weasel-eslint/react',
     files: ['**/*.{js,jsx,ts,tsx}'],
     extends: [
       // TODO: switch to "recommended-latest" when we use react compiler
@@ -40,7 +40,7 @@ export default defineConfig(
     },
   },
   {
-    name: 'vaul-eslint/react/baseline-js',
+    name: 'weasel-eslint/react/baseline-js',
     files: ['**/*.{js,ts,mjs,jsx,tsx}'],
     plugins: {
       'baseline-js': baselineJs,

@@ -1,5 +1,5 @@
 {
-  "name": "vaul-monorepo",
+  "name": "weasel-monorepo",
   "private": true,
   "packageManager": "pnpm@10.26.1",
   "scripts": {

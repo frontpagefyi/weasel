@@ -1,14 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { Drawer } from 'vaul';
+import { Drawer } from '@frontpage/weasel';
 
 export default function Page() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="w-screen h-screen bg-white p-8 flex justify-center items-center" data-vaul-drawer-wrapper="">
+    <div
+      className="w-screen h-screen bg-white p-8 flex justify-center items-center"
+      data-vaul-drawer-wrapper=""
+    >
       <Drawer.Root dismissible={false} open={open}>
-        <Drawer.Trigger data-testid="trigger" asChild onClick={() => setOpen(true)}>
+        <Drawer.Trigger
+          data-testid="trigger"
+          asChild
+          onClick={() => setOpen(true)}
+        >
           <button>Open Drawer</button>
         </Drawer.Trigger>
         <Drawer.Portal>
@@ -20,16 +27,20 @@ export default function Page() {
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
               <div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">
-                <Drawer.Title className="font-medium mb-4">Unstyled drawer for React.</Drawer.Title>
+                <Drawer.Title className="font-medium mb-4">
+                  Unstyled drawer for React.
+                </Drawer.Title>
                 <p className="text-zinc-600 mb-2">
-                  This component can be used as a replacement for a Dialog on mobile and tablet devices.
+                  This component can be used as a replacement for a Dialog on
+                  mobile and tablet devices.
                 </p>
                 <p className="text-zinc-600 mb-6">
                   It uses{' '}
                   <a
                     href="https://www.radix-ui.com/docs/primitives/components/dialog"
                     className="underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Radix&rsquo;s Dialog primitive
                   </a>{' '}
@@ -37,7 +48,8 @@ export default function Page() {
                   <a
                     href="https://twitter.com/devongovett/status/1674470185783402496"
                     className="underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     this tweet.
                   </a>
@@ -58,7 +70,8 @@ export default function Page() {
                 <a
                   className="text-xs text-zinc-600 flex items-center gap-0.25"
                   href="https://github.com/emilkowalski/vaul"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   GitHub
                   <svg
@@ -81,7 +94,8 @@ export default function Page() {
                 <a
                   className="text-xs text-zinc-600 flex items-center gap-0.25"
                   href="https://twitter.com/emilkowalski_"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Twitter
                   <svg
