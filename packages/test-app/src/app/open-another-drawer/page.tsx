@@ -1,6 +1,6 @@
 'use client';
 
-import { Drawer } from '@frontpage/weasel';
+import { Drawer } from 'weasel';
 import { useState } from 'react';
 
 function MyDrawer({

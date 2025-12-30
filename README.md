@@ -11,18 +11,18 @@ Weasel is an unstyled drawer component for React that can be used as a Dialog re
 
 Install using npm, yarn, or pnpm:
 ```sh
-npm install @frontpage/weasel
+npm install weasel
 ```
 ```sh
-yarn add @frontpage/weasel
+yarn add weasel
 ```
 ```sh
-pnpm add @frontpage/weasel
+pnpm add weasel
 ```
 
 Import the necessary components from the package:
 ```tsx
-import * as Drawer from '@frontpage/weasel';
+import * as Drawer from 'weasel';
 
 function MyDrawerComponent() {
   return (

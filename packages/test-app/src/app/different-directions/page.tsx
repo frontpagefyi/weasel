@@ -1,8 +1,8 @@
 'use client';
 
 import { clsx } from 'clsx';
-import { Drawer } from '@frontpage/weasel';
-import type { DialogProps } from '@frontpage/weasel';
+import { Drawer } from 'weasel';
+import type { DialogProps } from 'weasel';
 
 function DirectionalDrawer({
   direction,

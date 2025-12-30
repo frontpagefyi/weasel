@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Drawer } from '@frontpage/weasel';
+import { Drawer } from 'weasel';
 
 export default function Page() {
   return (

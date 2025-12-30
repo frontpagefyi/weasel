@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Drawer } from '@frontpage/weasel';
+import { Drawer } from 'weasel';
 
 export default function Page() {
   const [open, setOpen] = useState(false);

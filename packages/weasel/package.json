@@ -1,5 +1,5 @@
 {
-  "name": "@frontpage/weasel",
+  "name": "weasel",
   "version": "1.2.0",
   "description": "Drawer component for React.",
   "main": "./dist/index.js",

@@ -2,7 +2,7 @@
 
 import { clsx } from 'clsx';
 import { useState } from 'react';
-import { Drawer } from '@frontpage/weasel';
+import { Drawer } from 'weasel';
 
 const snapPoints = [0, '148px', '355px', 1];
 
