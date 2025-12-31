@@ -41,6 +41,51 @@ jobs:
       - name: Check code formatting
         run: pnpm exec prettier --check .
 
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          filter: 'blob:none'
+
+      - name: Cache turbo build setup
+        uses: actions/cache@v5
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Build package and test app
+        run: pnpm build
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v5
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-browsers-${{ hashFiles('pnpm-lock.yaml')}}
+
+      - name: Install Playwright Browsers
+        run: pnpm --filter=test-app exec playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: pnpm test
+
   lint:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -117,40 +162,3 @@ jobs:
 
       - name: Run type checking
         run: pnpm exec turbo run type-check --affected
-
-  test:
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-          filter: 'blob:none'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm i
-
-      - name: Build package and test app
-        run: pnpm build
-
-      - name: Cache Playwright browsers
-        uses: actions/cache@v5
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-browsers-${{ hashFiles('pnpm-lock.yaml')}}
-
-      - name: Install Playwright Browsers
-        run: pnpm --filter=test-app exec playwright install --with-deps
-
-      - name: Run Playwright tests
-        run: pnpm test
