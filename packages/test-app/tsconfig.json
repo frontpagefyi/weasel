@@ -3,9 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "allowJs": true,
+    "allowJs": true
   },
   "include": [
     "**/*.ts",
@@ -14,7 +14,7 @@
     "**/*.mjs",
     "**/*.mts",
     "next-env.d.ts",
-    ".next/types/**/*.ts",
+    ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "test-results", "playwright-report"],
+  "exclude": ["node_modules", "test-results", "playwright-report"]
 }

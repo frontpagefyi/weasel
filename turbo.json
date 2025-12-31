@@ -8,11 +8,16 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
+    "typegen": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/types/**"]
+    },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["^lint", "typegen"]
     },
     "type-check": {
-      "dependsOn": ["^type-check"]
+      "dependsOn": ["^type-check", "typegen"],
+      "outputs": ["eslint_report.json"]
     },
     "dev": {
       "cache": false,
