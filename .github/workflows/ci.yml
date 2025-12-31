@@ -78,13 +78,21 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-browsers-${{ hashFiles('pnpm-lock.yaml')}}
+          key: ${{ runner.os }}-playwright-browsers-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install Playwright Browsers
         run: pnpm --filter=test-app exec playwright install --with-deps
 
       - name: Run Playwright tests
         run: pnpm test
+
+      - name: Upload Playwright Test Report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: packages/test-app/playwright-report/
+          retention-days: 30
 
   lint:
     runs-on: ubuntu-latest
@@ -126,6 +134,7 @@ jobs:
 
       - name: Annotate Code Linting Results
         uses: ataylorme/eslint-annotate-action@v3
+        if: always()
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           report-json: 'packages/**/eslint_report.json'
